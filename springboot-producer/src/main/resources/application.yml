@@ -1,0 +1,32 @@
+server:
+  servlet:
+    context-path: /
+  port: 8081
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 15000
+    publisher-confirms: true
+    publisher-returns: true
+    template.mandatory: true
+    port: 15672
+  http:
+    encoding:
+      charset: utf-8
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  jackson.time-zone: GMT+8
+  default-property-inclusion: NON_NULL
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:com/coship/producer/mapper/*.xml
+  type-aliases-package: com.coship.producer
+  logging.level.tk.mybatis: TRACE
