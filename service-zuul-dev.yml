@@ -4,7 +4,7 @@
       ### 以 /api-member/访问转发到会员服务
       path: /api-member/**
       serviceId: member
-    api-b:
+   ### api-b:
       ### 以 /api-order/访问转发到订单服务
-      path: /api-order/**
-      serviceId: order
+  ###    path: /api-order/**
+  ###    serviceId: order
